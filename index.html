@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Digital Audit NV — Autoritate Semantică pentru Clinici Medicale de Elită. 4 materiale SEO specializate, livrate în 48h. 900 RON, fără abonament."/>
+<meta name="keywords" content="SEO medical, autoritate digitala, clinici medicale, indexare Google, continut medical"/>
+<title>Digital Audit NV — Autoritate Digitală pentru Clinici Medicale</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+<style>
+/* ── RESET & TOKENS ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+:root{
+  --navy:    #002147;
+  --navy-2:  #001530;
+  --navy-3:  #0a2d5e;
+  --gold:    #c9a84c;
+  --gold-lt: #e8d5a0;
+  --gold-dim:#8a6f2e;
+  --ivory:   #fafaf8;
+  --ivory-2: #f5f1e8;
+  --ivory-3: #ede8da;
+  --ink:     #1a1208;
+  --ink-2:   #3a3020;
+  --ink-3:   #6b5f4a;
+  --rule:    #d8d0bc;
+}
+
+body{
+  background:var(--ivory);
+  color:var(--ink-2);
+  font-family:'DM Sans',sans-serif;
+  font-size:1rem;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* ── UTILITIES ── */
+.container{max-width:1100px;margin:0 auto;padding:0 24px;}
+.serif{font-family:'Cormorant Garamond',Georgia,serif;}
+.gold{color:var(--gold);}
+.navy{color:var(--navy);}
+
+/* ── NAVBAR ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(0,33,71,0.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(201,168,76,0.2);
+  padding:0 24px;
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-weight:700;
+  letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);text-decoration:none;
+  line-height:1;
+}
+.nav-logo span{
+  display:block;font-size:0.45rem;
+  letter-spacing:2.5px;color:rgba(255,255,255,0.35);
+  margin-top:4px;
+}
+.nav-cta{
+  background:var(--gold);color:var(--navy);
+  font-size:0.7rem;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:10px 22px;text-decoration:none;
+  border:none;cursor:pointer;
+  transition:background 0.2s,transform 0.2s;
+}
+.nav-cta:hover{background:var(--gold-lt);transform:translateY(-1px);}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  background:var(--navy-2);
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding-top:64px;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 50%, rgba(201,168,76,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(0,33,71,0.8) 0%, transparent 70%);
+}
+.hero::after{
+  content:'';position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(201,168,76,0.03) 0px,
+      rgba(201,168,76,0.03) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(201,168,76,0.03) 0px,
+      rgba(201,168,76,0.03) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:1;
+  max-width:1100px;margin:0 auto;padding:80px 24px;
+  display:grid;grid-template-columns:1fr 420px;
+  gap:80px;align-items:center;
+}
+.hero-eyebrow{
+  font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:20px;
+  display:flex;align-items:center;gap:12px;
+}
+.hero-eyebrow::before{
+  content:'';display:inline-block;
+  width:32px;height:1px;background:var(--gold);
+}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,5vw,4.2rem);
+  font-weight:700;line-height:1.1;
+  color:#fff;margin-bottom:24px;
+  letter-spacing:-0.01em;
+}
+.hero h1 em{
+  font-style:italic;font-weight:300;color:var(--gold-lt);
+}
+.hero-sub{
+  font-size:1.05rem;color:rgba(255,255,255,0.6);
+  line-height:1.75;margin-bottom:40px;
+  max-width:520px;font-weight:300;
+}
+.hero-sub strong{color:rgba(255,255,255,0.85);font-weight:500;}
+.hero-actions{display:flex;flex-direction:column;gap:12px;}
+.btn-primary{
+  display:inline-block;
+  background:var(--gold);color:var(--navy);
+  font-size:0.8rem;font-weight:700;
+  letter-spacing:2.5px;text-transform:uppercase;
+  padding:18px 36px;text-decoration:none;
+  border:2px solid var(--gold);
+  text-align:center;
+  transition:all 0.25s;
+}
+.btn-primary:hover{background:var(--gold-lt);border-color:var(--gold-lt);transform:translateY(-2px);}
+.btn-secondary{
+  display:inline-block;
+  background:transparent;color:rgba(255,255,255,0.6);
+  font-size:0.75rem;font-weight:400;
+  letter-spacing:1.5px;
+  padding:8px 0;text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+  width:fit-content;
+  transition:all 0.2s;
+}
+.btn-secondary:hover{color:var(--gold);border-color:var(--gold);}
+.hero-note{
+  font-size:0.72rem;color:rgba(255,255,255,0.3);
+  letter-spacing:0.5px;margin-top:4px;
+}
+
+/* Hero card */
+.hero-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(201,168,76,0.2);
+  padding:36px;
+  position:relative;
+}
+.hero-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-lt),var(--gold));
+}
+.card-label{
+  font-size:0.65rem;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:20px;
+}
+.card-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem;font-weight:700;color:#fff;
+  line-height:1;margin-bottom:4px;
+}
+.card-price span{font-size:1.4rem;font-weight:300;opacity:0.7;}
+.card-price-sub{
+  font-size:0.72rem;color:rgba(255,255,255,0.35);
+  letter-spacing:1.5px;text-transform:uppercase;
+  margin-bottom:28px;
+}
+.card-items{list-style:none;margin-bottom:28px;}
+.card-items li{
+  font-size:0.88rem;color:rgba(255,255,255,0.7);
+  padding:9px 0;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  display:flex;align-items:flex-start;gap:10px;
+  line-height:1.5;
+}
+.card-items li::before{
+  content:'→';color:var(--gold);flex-shrink:0;
+  font-size:0.8rem;margin-top:1px;
+}
+.card-btn{
+  display:block;width:100%;
+  background:var(--gold);color:var(--navy);
+  font-size:0.75rem;font-weight:700;
+  letter-spacing:2.5px;text-transform:uppercase;
+  padding:16px;text-decoration:none;
+  text-align:center;border:none;cursor:pointer;
+  transition:all 0.2s;
+  margin-bottom:12px;
+}
+.card-btn:hover{background:var(--gold-lt);transform:translateY(-1px);}
+.card-security{
+  font-size:0.68rem;color:rgba(255,255,255,0.25);
+  text-align:center;line-height:1.5;
+}
+
+/* ── SECTION BASE ── */
+section{padding:96px 0;}
+.section-eyebrow{
+  font-size:0.68rem;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-eyebrow::after{
+  content:'';flex:1;max-width:40px;height:1px;background:var(--gold);opacity:0.4;
+}
+.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:600;line-height:1.2;
+  color:var(--navy);margin-bottom:20px;
+}
+.section-lead{
+  font-size:1.05rem;color:var(--ink-3);
+  line-height:1.75;max-width:600px;
+  font-weight:300;
+}
+
+/* ── PROBLEM ── */
+.problem{background:var(--ivory-2);}
+.problem-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:64px;align-items:center;
+}
+.problem-visual{position:relative;}
+.problem-stat{
+  background:var(--navy);padding:32px;
+  position:relative;margin-bottom:16px;
+}
+.problem-stat::before{
+  content:'';position:absolute;
+  left:0;top:0;bottom:0;width:4px;
+  background:var(--gold);
+}
+.stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem;font-weight:700;color:var(--gold);
+  line-height:1;
+}
+.stat-label{
+  font-size:0.85rem;color:rgba(255,255,255,0.6);
+  margin-top:6px;line-height:1.5;
+}
+.problem-insight{
+  background:#fff;border:1px solid var(--rule);
+  border-left:3px solid var(--gold);
+  padding:20px 22px;
+}
+.insight-label{
+  font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:8px;
+}
+.insight-text{
+  font-size:0.9rem;color:var(--ink-2);line-height:1.65;
+}
+.problem-text p{
+  font-size:1rem;color:var(--ink-2);
+  line-height:1.78;margin-bottom:20px;
+  font-weight:300;
+}
+.problem-text strong{color:var(--navy);font-weight:600;}
+
+/* ── WHAT WE DO ── */
+.what{background:#fff;}
+.what-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;background:var(--rule);margin-top:56px;
+}
+.what-item{
+  background:#fff;padding:36px 28px;
+  position:relative;
+  transition:background 0.2s;
+}
+.what-item:hover{background:var(--ivory-2);}
+.what-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.8rem;font-weight:300;
+  color:var(--gold);opacity:0.4;
+  line-height:1;margin-bottom:20px;
+}
+.what-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:600;
+  color:var(--navy);margin-bottom:12px;
+  line-height:1.3;
+}
+.what-desc{
+  font-size:0.88rem;color:var(--ink-3);
+  line-height:1.68;
+}
+.what-tag{
+  display:inline-block;margin-top:16px;
+  font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);border:1px solid rgba(201,168,76,0.3);
+  padding:4px 10px;
+}
+
+/* ── HOW ── */
+.how{background:var(--ivory-2);}
+.how-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;margin-top:56px;position:relative;
+}
+.how-steps::before{
+  content:'';position:absolute;
+  top:28px;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--gold),transparent);
+  opacity:0.3;
+}
+.how-step{
+  padding:0 24px;text-align:center;
+  position:relative;
+}
+.step-circle{
+  width:56px;height:56px;border-radius:50%;
+  background:var(--navy);border:2px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:700;color:var(--gold);
+}
+.step-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-weight:600;
+  color:var(--navy);margin-bottom:8px;
+}
+.step-desc{
+  font-size:0.83rem;color:var(--ink-3);line-height:1.6;
+}
+
+/* ── EXCLUSIVITY ── */
+.exclusivity{background:var(--navy);}
+.excl-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.excl-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  font-weight:600;line-height:1.2;color:#fff;
+  margin-bottom:24px;
+}
+.excl-title em{font-style:italic;font-weight:300;color:var(--gold-lt);}
+.excl-text{
+  font-size:0.95rem;color:rgba(255,255,255,0.6);
+  line-height:1.78;margin-bottom:20px;font-weight:300;
+}
+.excl-text strong{color:rgba(255,255,255,0.85);}
+.excl-policies{display:flex;flex-direction:column;gap:16px;}
+.policy-item{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(201,168,76,0.15);
+  border-left:3px solid var(--gold);
+  padding:18px 20px;
+}
+.policy-label{
+  font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px;
+}
+.policy-text{
+  font-size:0.88rem;color:rgba(255,255,255,0.65);line-height:1.6;
+}
+
+/* ── CTA SECTION ── */
+.cta-section{
+  background:var(--ivory-2);
+  text-align:center;
+  padding:120px 24px;
+}
+.cta-section .section-title{margin:0 auto 16px;}
+.cta-section .section-lead{margin:0 auto 48px;text-align:center;}
+.cta-price-display{
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem;font-weight:700;
+  color:var(--navy);line-height:1;
+  margin-bottom:8px;
+}
+.cta-price-display span{font-size:2rem;font-weight:300;opacity:0.5;}
+.cta-price-sub{
+  font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:40px;
+}
+.cta-btn-wrap{margin-bottom:16px;}
+.btn-cta-main{
+  display:inline-block;
+  background:var(--navy);color:var(--gold);
+  font-size:0.8rem;font-weight:700;
+  letter-spacing:2.5px;text-transform:uppercase;
+  padding:20px 56px;text-decoration:none;
+  border:2px solid var(--navy);
+  transition:all 0.25s;
+}
+.btn-cta-main:hover{
+  background:transparent;color:var(--navy);
+  border-color:var(--navy);transform:translateY(-2px);
+}
+.cta-security{
+  font-size:0.75rem;color:var(--ink-3);
+  letter-spacing:0.5px;line-height:1.6;
+  margin-bottom:48px;
+}
+.cta-delivery{
+  display:inline-flex;gap:48px;
+  border-top:1px solid var(--rule);
+  padding-top:40px;
+}
+.delivery-item{text-align:center;}
+.delivery-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:700;color:var(--navy);
+  line-height:1;
+}
+.delivery-label{
+  font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--ink-3);margin-top:4px;
+}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--navy-2);
+  padding:48px 24px 32px;
+}
+.footer-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:24px;
+  padding-bottom:32px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.footer-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;font-weight:700;letter-spacing:4px;
+  text-transform:uppercase;color:var(--gold);
+}
+.footer-logo span{
+  display:block;font-family:'DM Sans',sans-serif;
+  font-size:0.55rem;letter-spacing:2.5px;
+  color:rgba(255,255,255,0.2);margin-top:4px;
+}
+.footer-contact{
+  font-size:0.85rem;color:rgba(255,255,255,0.4);
+}
+.footer-contact a{color:var(--gold);text-decoration:none;}
+.footer-bottom{
+  max-width:1100px;margin:24px auto 0;
+  font-size:0.72rem;color:rgba(255,255,255,0.18);
+  letter-spacing:0.5px;
+  display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:8px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.hero-inner>*{
+  animation:fadeUp 0.8s ease both;
+}
+.hero-inner>*:nth-child(2){animation-delay:0.15s;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  .hero-card{max-width:420px;}
+  .problem-grid{grid-template-columns:1fr;}
+  .what-grid{grid-template-columns:1fr;}
+  .how-steps{grid-template-columns:1fr 1fr;gap:40px;}
+  .how-steps::before{display:none;}
+  .excl-inner{grid-template-columns:1fr;}
+  .cta-delivery{gap:32px;}
+}
+@media(max-width:600px){
+  .hero h1{font-size:2.2rem;}
+  .how-steps{grid-template-columns:1fr;}
+  .cta-price-display{font-size:3.5rem;}
+  .cta-delivery{flex-direction:column;gap:20px;}
+  .nav-logo span{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      Digital Audit NV
+      <span>Institutul pentru Autoritate Semantică</span>
+    </a>
+    <a class="nav-cta" href="https://buy.stripe.com/28E5kE5Zd7V3bKme6bcV200">
+      Comandă — 900 RON
+    </a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Autoritate Digitală · Sector Medical</div>
+      <h1>
+        Clinica ta merită<br/>
+        să fie <em>găsită</em><br/>
+        de pacienții potriviți.
+      </h1>
+      <p class="hero-sub">
+        Algoritmul Google nu premiază cel mai bun medic.
+        Îl premiază pe cel mai bine
+        <strong>documentat semantic</strong>.
+        Noi construim acea documentație —
+        4 materiale clinice de autoritate,
+        livrate în 48 de ore.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://buy.stripe.com/28E5kE5Zd7V3bKme6bcV200">
+          🛒 Comandați Acum — 900 RON
+        </a>
+        <a class="btn-secondary" href="#cum-functioneaza">
+          Cum funcționează →
+        </a>
+        <p class="hero-note">🔒 Plată securizată prin Stripe · Livrare în 48h</p>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="card-label">Protocolul de Autoritate Digitală</div>
+      <div class="card-price">900 <span>RON</span></div>
+      <div class="card-price-sub">Plată unică · Fără abonament</div>
+      <ul class="card-items">
+        <li>4 articole medicale de specialitate, optimizate SEO local</li>
+        <li>Calibrare completă: title tag, meta-description, focus keyword</li>
+        <li>Protocol de publicare săptămânal inclus</li>
+        <li>Livrare în format HTML, Word și PDF</li>
+        <li>Exclusivitate pe județ pentru specialitatea ta</li>
+      </ul>
+      <a class="card-btn" href="https://buy.stripe.com/28E5kE5Zd7V3bKme6bcV200">
+        🛒 Cumpărați Acum
+      </a>
+      <div class="card-security">
+        🔒 Stripe SSL · Chitanță automată · Livrare pe email în 48h
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEMA ── -->
+<section class="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-text">
+        <div class="section-eyebrow">Situația din piață</div>
+        <h2 class="section-title">De ce clinicile excelente rămân <em>invizibile</em></h2>
+        <p>
+          Pacienții care caută un medic specialist nu parcurg recenzii sau CV-uri.
+          Ei văd primele 3 rezultate Google și aleg de acolo.
+          <strong>Algoritmi nu evaluează diplome. Evaluează autoritate semantică documentată.</strong>
+        </p>
+        <p>
+          O clinică fără conținut de specialitate publicat regulat este,
+          din perspectiva motorului de căutare,
+          <strong>echivalentul unei firme fără firmă pe o stradă aglomerată.</strong>
+          Concurența cu o infrastructură clinică inferioară captează adesea
+          pacienții premium strict prin algoritmi mai bine optimizați.
+        </p>
+        <p>
+          Nu este o problemă de calitate medicală.
+          Este o problemă de <strong>vizibilitate algoritmică</strong> —
+          și are o soluție precisă.
+        </p>
+      </div>
+      <div class="problem-visual">
+        <div class="problem-stat">
+          <div class="stat-num">94%</div>
+          <div class="stat-label">
+            dintre pacienți încep căutarea unui medic specialist pe Google —
+            nu prin recomandare verbală
+          </div>
+        </div>
+        <div class="problem-stat">
+          <div class="stat-num">8 sec</div>
+          <div class="stat-label">
+            durata medie de decizie a unui pacient premium
+            când vede rezultatele de căutare
+          </div>
+        </div>
+        <div class="problem-insight">
+          <div class="insight-label">Consecința directă</div>
+          <div class="insight-text">
+            Fiecare lună fără conținut de autoritate publicat este o lună
+            în care competitorii cu expertiză clinică inferioară câștigă
+            pacienții care vă aparțineau de drept.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CE FACEM ── -->
+<section class="what">
+  <div class="container">
+    <div class="section-eyebrow">Ce livrăm</div>
+    <h2 class="section-title">Protocolul de Autoritate Digitală</h2>
+    <p class="section-lead">
+      Nu marketing generic. Conținut medical de specialitate,
+      calibrat semantic pentru algoritmii Google E-E-A-T 2026,
+      livrat gata de publicat.
+    </p>
+    <div class="what-grid">
+      <div class="what-item">
+        <div class="what-num">01</div>
+        <div class="what-title">4 Articole Clinice de Specialitate</div>
+        <div class="what-desc">
+          Scrise medical corect, optimizate SEO local pe termenii cu cea mai mare
+          intenție de cumpărare din județul dumneavoastră.
+          Acoperă procedurile cu cel mai mare volum de căutare.
+        </div>
+        <div class="what-tag">Conținut</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">02</div>
+        <div class="what-title">Calibrare SEO Completă</div>
+        <div class="what-desc">
+          Title tag, meta-description și focus keyword pentru fiecare articol,
+          calibrate conform algoritmilor E-E-A-T — gata de publicat
+          fără nicio modificare tehnică din partea dumneavoastră.
+        </div>
+        <div class="what-tag">Optimizare</div>
+      </div>
+      <div class="what-item">
+        <div class="what-num">03</div>
+        <div class="what-title">Protocol de Publicare + Livrare Multi-Format</div>
+        <div class="what-desc">
+          Calendar de publicare săptămânal pentru efect algoritmic maxim.
+          Livrare în format HTML, Word și PDF — direct pe email,
+          gata de urcat pe site.
+        </div>
+        <div class="what-tag">Livrare</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CUM FUNCȚIONEAZĂ ── -->
+<section class="how" id="cum-functioneaza">
+  <div class="container">
+    <div class="section-eyebrow">Procesul</div>
+    <h2 class="section-title">De la comandă la indexare</h2>
+    <p class="section-lead">
+      Fără apeluri telefonice. Fără ședințe. Totul 100% digital.
+    </p>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-circle">1</div>
+        <div class="step-title">Cumpărați Protocolul</div>
+        <div class="step-desc">
+          Plată securizată prin Stripe. Primiți confirmarea imediat pe email.
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">2</div>
+        <div class="step-title">Analiză Locală</div>
+        <div class="step-desc">
+          Analizăm termenii cu cea mai mare intenție de cumpărare
+          pentru specialitatea și județul dumneavoastră.
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">3</div>
+        <div class="step-title">Producție în 48h</div>
+        <div class="step-desc">
+          Redactăm cele 4 articole clinice, calibrăm metadata
+          și pregătim protocolul de publicare.
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">4</div>
+        <div class="step-title">Livrare pe Email</div>
+        <div class="step-desc">
+          Primiți tot pachetul în HTML, Word și PDF.
+          Publicați conform calendarului. Google indexează.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXCLUSIVITATE ── -->
+<section class="exclusivity">
+  <div class="container">
+    <div class="excl-inner">
+      <div>
+        <div class="section-eyebrow" style="color:var(--gold);">Modelul nostru de business</div>
+        <h2 class="excl-title">
+          O singură clinică<br/>
+          per specialitate,<br/>
+          <em>per județ.</em>
+        </h2>
+        <p class="excl-text">
+          Digital Audit NV colaborează cu
+          <strong>o singură clinică per specialitate în fiecare județ.</strong>
+          Este singura modalitate prin care putem garanta dominanța semantică
+          pentru clientul nostru — fără conflict de interese algoritmic.
+        </p>
+        <p class="excl-text">
+          Odată ce o clinică securizează protocolul pentru specialitatea sa,
+          nu acceptăm contracte de la competitorii direcți din regiune.
+          <strong>Locul revine primei clinici care confirmă.</strong>
+        </p>
+      </div>
+      <div class="excl-policies">
+        <div class="policy-item">
+          <div class="policy-label">Garanție de Integritate</div>
+          <div class="policy-text">
+            Nu lucrăm cu doi stomatologi din același județ simultan.
+            Investiția dumneavoastră este protejată contractual.
+          </div>
+        </div>
+        <div class="policy-item">
+          <div class="policy-label">Politica Zero-Intrusion</div>
+          <div class="policy-text">
+            Fără apeluri de vânzări. Fără ședințe consumatoare de timp clinic.
+            Totul se procesează 100% digital și asincron.
+          </div>
+        </div>
+        <div class="policy-item">
+          <div class="policy-label">Livrare Garantată</div>
+          <div class="policy-text">
+            Materialele ajung pe email în maximum 48 de ore de la confirmarea plății.
+            Fără excepții.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA FINAL ── -->
+<section class="cta-section">
+  <div class="section-eyebrow" style="justify-content:center;">Comandați acum</div>
+  <h2 class="section-title" style="text-align:center;">
+    Securizați exclusivitatea<br/>în județul dumneavoastră
+  </h2>
+  <p class="section-lead" style="text-align:center;margin:0 auto 48px;">
+    Gestionăm simultan evaluări pentru mai multe clinici din același județ.
+    Prima care confirmă securizează locul.
+  </p>
+
+  <div class="cta-price-display">900 <span>RON</span></div>
+  <div class="cta-price-sub">Plată unică · Fără abonament · Fără întâlniri</div>
+
+  <div class="cta-btn-wrap">
+    <a class="btn-cta-main" href="https://buy.stripe.com/28E5kE5Zd7V3bKme6bcV200">
+      🛒 Cumpărați Protocolul de Autoritate
+    </a>
+  </div>
+  <div class="cta-security">
+    🔒 Plată securizată prin Stripe &nbsp;·&nbsp;
+    SSL 256-bit &nbsp;·&nbsp;
+    Chitanță automată &nbsp;·&nbsp;
+    Livrare pe email în 48 de ore
+  </div>
+
+  <div class="cta-delivery">
+    <div class="delivery-item">
+      <div class="delivery-num">48h</div>
+      <div class="delivery-label">Timp de livrare</div>
+    </div>
+    <div class="delivery-item">
+      <div class="delivery-num">4</div>
+      <div class="delivery-label">Materiale incluse</div>
+    </div>
+    <div class="delivery-item">
+      <div class="delivery-num">1</div>
+      <div class="delivery-label">Clinică per județ</div>
+    </div>
+    <div class="delivery-item">
+      <div class="delivery-num">0</div>
+      <div class="delivery-label">Apeluri telefonice</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      Digital Audit NV
+      <span>Institutul pentru Autoritate Semantică</span>
+    </div>
+    <div class="footer-contact">
+      Departamentul de Analiză &nbsp;·&nbsp;
+      <a href="mailto:analiza@digitalauditnv.com">analiza@digitalauditnv.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Digital Audit NV · Toate drepturile rezervate</span>
+    <span>Sector Medical Premium · România</span>
+  </div>
+</footer>
+
+</body>
+</html>
